@@ -24,7 +24,9 @@
 .musicbar > *{padding:0 0.2rem;}
 
 .musicbar__img{
-    width: 100%;
+    min-width: 50px;
+    max-height: 50px;
+    max-width: 100%;
     border-radius: 10px;
 }
 
