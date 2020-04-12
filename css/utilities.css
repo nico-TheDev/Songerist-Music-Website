@@ -1,0 +1,190 @@
+/* MUSICBAR */
+
+.musicbar{
+    background-color:rgba(0,0,0,0.0.03);
+    min-width: 800px;
+    max-width: 900px;
+    padding: 0.3rem;
+    font-weight: 600;
+
+    transition: all 300ms ease-out;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.musicbar:hover{
+    transform: scale(1.02);
+    border: 1px solid rgba(128, 128, 128, 0.541);
+}
+
+.musicbar > *{padding:0 0.2rem;}
+
+.musicbar__img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.musicbar__song-artist,
+.musicbar__albumname{flex-basis: calc(30% - 0.4rem);}
+
+.artist-name{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.musicbar__number,
+.musicbar__img,
+.musicbar__arrow,
+.musicbar__react{
+    flex-basis: calc(5% - 0.4rem);
+    text-align: center;
+
+    transition: all 300ms ease;
+}
+
+.musicbar__time,
+.musicbar__stat{flex-basis: calc(10% - 0.4rem);}
+
+/* STYLING OF MUSIC BAR */
+
+.musicbar__number{
+    font-weight: bold;
+    color: rgba(0,0,0,0.4);
+}
+.musicbar__react,
+.musicbar__arrow{color: gray;}
+
+
+.musicbar__react:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.musicbar__arrow:hover{
+    cursor: pointer;
+    color: #3498db;
+}
+.musicbar__arrow--blue:hover,
+.musicbar__react--red:hover{
+    cursor: pointer;
+    color: gray;
+}
+.musicbar__arrow--blue{color: #3498db;}
+
+.musicbar--transparent{visibility: hidden;}
+.musicbar__react--red{color: red;}
+
+.default{color: black;}
+
+/* ALBUMCARD */
+
+.album-card{
+    min-width: 150px;
+    max-width: 150px;
+    padding:0.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-card:hover{cursor: pointer;}
+
+.album-card__cover{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.album-card__img{
+    width: 100%;
+}
+
+.album-card__cover::after{
+    content: "See More";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    top: 0;
+    opacity: 0;
+
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-card__cover:hover::after{
+    opacity: 1;
+}
+
+.album__name{
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+.album__artist{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.hide{display: none;}
+
+/* BUTTONS */
+
+.btn{
+    font-size: 1.3rem;
+    color: rgb(119, 16, 16);
+    border: 2px solid rgb(119, 16, 16);
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    color: white;
+    border-color: white;
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+@keyframes jiggle{
+    0%{
+        transform:rotate(0);
+    }
+
+    50%{
+        transform: rotate(-10deg);
+    }
+
+    75%{
+        transform: rotate(10deg);
+    }
+
+    100%{
+        transform:rotate(0);
+    }
+}
+
+@keyframes change-bg{
+    from{
+        background:linear-gradient(to bottom right,#e49b2d96,#e6ca3166),url(/img/paramore.jpg);
+    }
+    to{
+        background:linear-gradient(to bottom right,#e49b2d96,#e6ca3166),url(/img/paramore2.jpg);
+    }
+}
